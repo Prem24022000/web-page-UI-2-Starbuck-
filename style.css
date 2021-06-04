@@ -23,7 +23,7 @@ nav .flex{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 nav .flex ul{
@@ -43,15 +43,18 @@ nav .flex ul li a{
     color: rgb(235, 43, 43);
 }
 
-.line{
+nav .flex ul li::after{
+    content: '';
     background-color: rgb(235, 43, 43);
     height: 2px;
-    width: 0;
+    width: 0%;
     margin-top: 4px;
-    transition: width 0.4s;
+    display: block;
+    transition: width 0.4s linear;
+    margin: auto;
 }
 
-nav .flex ul li a:hover > .line{
+nav .flex ul li:hover::after{
     width: 100%;
 }
 
